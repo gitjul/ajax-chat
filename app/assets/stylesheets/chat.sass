@@ -2,7 +2,7 @@ body
   max-width: 100%
   height: 100%
 
-  font: 1em/1.5 Arial
+  font: 1em/1.25 Arial
 
 form
   width: 25em
@@ -13,6 +13,8 @@ form
   width: 100%
   border: 1px solid #acacac
   margin-bottom: .5em
+  padding: .5em
+  overflow: auto
 
 label
   display: inline-block
@@ -39,3 +41,21 @@ input:focus
 
   &:hover
     background: #27ae60
+
+.message
+  position: relative
+  margin-bottom: 1em
+
+.message-text
+  display: block
+  margin-top: .25em
+
+.nick
+  color: #a0a0a0
+
+.timestamp
+  font-size: .8em
+  color: #a0a0a0
+  position: absolute
+  top: 0
+  right: 0
