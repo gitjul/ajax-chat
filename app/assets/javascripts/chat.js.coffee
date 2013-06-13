@@ -25,16 +25,16 @@ $ ->
         for messageObject in data
           messageRow = $("<div class='message'></div>")
           timestamp = $("<span class='timestamp'></span>")
-          timestamp.text(messageObject.created_at)
+          timestamp.text(messageObject.time)
 
           nick = $("<span class='nick'></span>")
           nick.text(messageObject.nick)
 
-          message = $("<span class='timestamp'></span>")
+          message = $("<span class='message-text'></span>")
           message.text(messageObject.message)
 
-          messageRow.append(timestamp)
           messageRow.append(nick)
+          messageRow.append(timestamp)
           messageRow.append(message)
 
           $(".chat-window").append(messageRow)
