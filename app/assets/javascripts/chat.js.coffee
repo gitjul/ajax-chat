@@ -1,5 +1,12 @@
 $ ->
   lastId = 0
+  chat_window = $('.chat-window')
+
+  scrollDown = ->
+    chat_height = chat_window[0].scrollHeight
+    chat_window.scrollTop(chat_height)
+
+  scrollDown()
 
   $('[type=submit]').click (e) ->
     nick = $('[name=nick]').val()
@@ -38,6 +45,7 @@ $ ->
           messageRow.append(message)
 
           $(".chat-window").append(messageRow)
+          scrollDown()
 
           lastId = messageObject.id if messageObject.id > lastId 
   , 1000
