@@ -1,4 +1,8 @@
 AjaxChat::Application.routes.draw do
+
+  get 'outgoing' => 'chat#outgoing'
+  post 'incoming' => 'chat#incoming'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
