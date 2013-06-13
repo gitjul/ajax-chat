@@ -9,17 +9,19 @@ $ ->
   scrollDown()
 
   $('[type=submit]').click (e) ->
-    nick = $('[name=nick]').val()
-    message = $('[name=message]').val()
+    nick = $('[name=nick]')
+    message = $('[name=message]')
     e.preventDefault()
 
     $.ajax
       url: 'http://localhost:3000/incoming'
       method: 'POST'
       data:
-        nick: nick
-        message: message
+        nick: nick.val()
+        message: message.val()
       dataType: 'json'
+
+    message.val('')
 
   setInterval ->
     $.ajax
